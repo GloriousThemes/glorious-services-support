@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "..\\sproutedweb-wp-support"
+		},
+		{
+			"path": "..\\really-simple-ssl"
 		}
 	]
 }
