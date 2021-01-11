@@ -13,6 +13,7 @@
       </div>
    </div>
 </div>
+
 <div class="rsssl-container">
    <div class="rsssl-main">
       <div class="rsssl-grid">
@@ -21,16 +22,15 @@
                <div class="rsssl-grid-item-header">
                   <h3>Settings</h3>
                   <div class="rsssl-secondary-header-item">
-                     <div class="rsssl-save-settings-feedback" style="display: none;">
-                        Save settings	
-                     </div>
                      <div class="rsssl-instructions"></div>
                   </div>
                </div>
                <div class="rsssl-grid-item-content">
                   <form action="options.php" method="post">
+                    <?php settings_fields( 'glorious-services-settings-group' ); ?>
+                    <?php do_settings_sections( 'glorious-services-settings-group' ); ?>
                      <div class="rsssl-settings">
-                        <input type="hidden" name="option_page" value="rlrsssl_options"><input type="hidden" name="action" value="update"><input type="hidden" id="_wpnonce" name="_wpnonce" value="ec7722112f"><input type="hidden" name="_wp_http_referer" value="/wp-admin/options-general.php?page=rlrsssl_really_simple_ssl">
+                        
                         <h2>Settings</h2>
                         <table class="form-table" role="presentation">
                            <tbody>
@@ -39,47 +39,28 @@
                                     <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="In most cases you need to leave this enabled, to prevent mixed content issues on your site.">
                                     <span class="dashicons dashicons-editor-help"></span>
                                     </span>
-                                    <div class="rsssl-settings-text">Mixed content fixer</div>
+                                    <div class="rsssl-settings-text">Activate Support via Chat (<?php echo get_option('is_chat_active')==1 ? 'Active' : 'Not Active'; ?>)</div>
+                                    
                                  </th>
-                                 <td>        <label class="rsssl-switch" id="rsssl-maybe-highlight-autoreplace_insecure_links">
-                                    <input id="rlrsssl_options" name="rlrsssl_options[autoreplace_insecure_links]" size="40" value="1" type="checkbox" checked="checked">
-                                    <span class="rsssl-slider rsssl-round"></span>
+                                 <td>
+                                    <label class="rsssl-switch" id="rsssl-maybe-highlight-autoreplace_insecure_links">
+
+                                    <input id="is_chat_active" name="is_chat_active" size="40" value="1" type="checkbox" 
+                                        <?php echo get_option('is_chat_active')==1 ? 'checked="checked"' : ''; ?>>
+                                        <span class="rsssl-slider rsssl-round"></span>
                                     </label>
+                                    
                                  </td>
                               </tr>
-                              <tr>
-                                 <th scope="row">
-                                    <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer." "="">
-                                    <span class="dashicons dashicons-editor-help"></span>
-                                    </span>
-                                    <div class="rsssl-settings-text">Fire mixed content fixer with different method</div>
-                                 </th>
-                                 <td>        <label class="rsssl-switch">
-                                    <input id="rlrsssl_options" name="rlrsssl_options[switch_mixed_content_fixer_hook]" size="40" value="1" type="checkbox">
-                                    <span class="rsssl-slider rsssl-round"></span>
-                                    </label>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">
-                                    <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab">
-                                    <span class="dashicons dashicons-editor-help"></span>
-                                    </span>
-                                    <div class="rsssl-settings-text">Dismiss all Really Simple SSL notices</div>
-                                 </th>
-                                 <td>        <label class="rsssl-switch">
-                                    <input id="rlrsssl_options" name="rlrsssl_options[dismiss_all_notices]" size="40" value="1" type="checkbox">
-                                    <span class="rsssl-slider rsssl-round"></span>
-                                    </label>
-                                 </td>
-                              </tr>
+
                            </tbody>
                         </table>
                      </div>
+                     <?php submit_button(); ?>
                   </form>
                </div>
                <div class="rsssl-grid-item-footer">
-                  <input class="button button-rsssl-secondary rsssl-button-save" name="Submit" type="submit" value="Save" disabled="">
+               
                </div>
             </div>
          </div>

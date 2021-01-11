@@ -31,7 +31,7 @@ add_action('admin_menu', 'glorious_services_create_menu');
 function glorious_services_create_menu() {
 
 	//create new top-level menu
-     add_menu_page('Glorious WordPress Services & Support', 'Glorious Support', 'administrator', __FILE__, 'glorious_services_settings_page' , plugins_url('/images/icon24.png', __FILE__), 2 );
+     add_menu_page('Glorious WordPress Services & Support', 'Glorious Support', 'administrator', 'glorious-services-support', 'glorious_services_settings_page' , plugins_url('/images/icon24.png', __FILE__), 2 );
      
      //add_menu_page( string $page_title, string $menu_title, string $capability, string $menu_slug, callable $function = '', string $icon_url = '', int $position = null )
 
@@ -54,33 +54,34 @@ function glorious_services_settings_page() {
 include 'includes/template.php';
 
 ?>
+<!-- 
 <div class="wrap">
 <h1>Glorious Services and Support by GloriousThemes</h1>
 
 <form method="post" action="options.php">
-    <?php settings_fields( 'glorious-services-settings-group' ); ?>
-    <?php do_settings_sections( 'glorious-services-settings-group' ); ?>
+    <?php // settings_fields( 'glorious-services-settings-group' ); ?>
+    <?php // do_settings_sections( 'glorious-services-settings-group' ); ?>
     <table class="form-table">
         <tr valign="top">
         <th scope="row">Activate Support via Chat</th>
         <td>
             <select id="is_chat_active" style="width: 10%;" name="is_chat_active">
-                <option value="1" <?php echo get_option('is_chat_active')==1 ? 'selected' : ''; ?>>Enable</option>
-                <option value="0" <?php echo get_option('is_chat_active')==0 ? 'selected' : ''; ?>>Disable</option>
+                <option value="1" <?php //echo get_option('is_chat_active')==1 ? 'selected' : ''; ?>>Enable</option>
+                <option value="0" <?php //echo get_option('is_chat_active')==0 ? 'selected' : ''; ?>>Disable</option>
             </select>
             <?php // echo esc_attr( get_option('is_chat_active') ); ?>
             <!-- <input type="text" name="is_chat_active" value="<?php // echo esc_attr( get_option('is_chat_active') ); ?>" /> -->
+            <!--
         </td>
         </tr>
     </table>
     
-    <?php submit_button(); ?>
+    <?php //submit_button(); ?>
 
 </form>
 </div>
-
-<?php 
-
+-->
+<?php
 } //function ends here
 
 
@@ -96,4 +97,54 @@ function glorious_services_admin_style() {
 }
 add_action( 'admin_enqueue_scripts', 'glorious_services_admin_style' );
 
-?>
+
+
+
+if ( ! function_exists( 'gss_fs' ) ) {
+    // Create a helper function for easy SDK access.
+    function gss_fs() {
+        global $gss_fs;
+
+        if ( ! isset( $gss_fs ) ) {
+            // Include Freemius SDK.
+            require_once dirname(__FILE__) . '/freemius/start.php';
+
+            $gss_fs = fs_dynamic_init( array(
+                'id'                  => '7569',
+                'slug'                => 'glorious-services-support',
+                'type'                => 'plugin',
+                'public_key'          => 'pk_7fc13b15586aec6ffccc4d74dbc72',
+                'is_premium'          => true,
+                'is_premium_only'     => false,
+                'has_addons'          => false,
+                'has_paid_plans'      => true,
+                'menu'                => array(
+                    'slug'           => 'glorious-services-support',
+                    'first-path'     => 'admin.php?page=glorious-services-support',
+                ),
+                // Set the SDK to work in a sandbox mode (for development & testing).
+                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
+                'secret_key'          => 'sk_bQ;)zvN.jHia0R}fwU7R:oQt*HFhr',
+            ) );
+        }
+
+        return $gss_fs;
+    }
+
+    // Init Freemius.
+    gss_fs();
+    // Signal that SDK was initiated.
+    do_action( 'gss_fs_loaded' );
+}
+
+
+
+/* Describe what the code snippet does so you can remember later on */
+add_action('admin_head', 'glorious_chat_code');
+function glorious_chat_code(){
+    if(get_option('is_chat_active') == 1 ){
+    ?>
+    <script src="//code.tidio.co/vaty8wxfehnkr4iofaae5znr0rmbjwtq.js" async></script>
+    <?php
+    }
+}
