@@ -5,11 +5,11 @@
    </div>
    <div class="header-links">
       <div class="documentation">
-         <a href="https://really-simple-ssl.com/knowledge-base" class="" target="_blank">Documentation</a>
+         <a href="https://gloriousthemes.com/docs/" class="" target="_blank">Documentation</a>
       </div>
       <div class="header-upsell">
          <div class="documentation">
-            <a href="https://wordpress.org/support/plugin/really-simple-ssl/" class="button button-primary" target="_blank">Support</a>
+            <a href="https://gloriousthemes.com/support/" class="button button-primary" target="_blank">Support</a>
          </div>
       </div>
    </div>
