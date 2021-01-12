@@ -51,7 +51,8 @@ function register_glorious_services_settings() {
 
 function glorious_services_settings_page() {
 
-include 'includes/template.php';
+//require_once 'includes/template.php';
+require_once( plugin_dir_path( __FILE__ ) . '/includes/template.php');
 
 ?>
 <!-- 
@@ -110,21 +111,17 @@ if ( ! function_exists( 'gss_fs' ) ) {
             require_once dirname(__FILE__) . '/freemius/start.php';
 
             $gss_fs = fs_dynamic_init( array(
-                'id'                  => '7569',
+                'id'                  => '7586',
                 'slug'                => 'glorious-services-support',
                 'type'                => 'plugin',
-                'public_key'          => 'pk_7fc13b15586aec6ffccc4d74dbc72',
-                'is_premium'          => true,
-                'is_premium_only'     => false,
+                'public_key'          => 'pk_7908de6823339b01daa866681003f',
+                'is_premium'          => false,
                 'has_addons'          => false,
-                'has_paid_plans'      => true,
+                'has_paid_plans'      => false,
                 'menu'                => array(
                     'slug'           => 'glorious-services-support',
-                    'first-path'     => 'admin.php?page=glorious-services-support',
+                    'support'        => false,
                 ),
-                // Set the SDK to work in a sandbox mode (for development & testing).
-                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
-                'secret_key'          => 'sk_bQ;)zvN.jHia0R}fwU7R:oQt*HFhr',
             ) );
         }
 
@@ -148,3 +145,4 @@ function glorious_chat_code(){
     <?php
     }
 }
+

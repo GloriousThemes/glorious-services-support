@@ -1,3 +1,4 @@
+<?php ?>
 <div class="nav-tab-wrapper">
    <div class="rsssl-logo-container">
       <div id="rsssl-logo"><img width="200" height="" src="<?php echo GLORIOUS_PLUGIN;?>images/glorious-themes-dark.png" alt="glorious-logo"></div>

@@ -1,16 +1,20 @@
 {
 	"folders": [
 		{
+			"name": "flying-pages",
 			"path": "..\\flying-pages"
 		},
 		{
-			"path": "."
-		},
-		{
+			"name": "sproutedweb-wp-support",
 			"path": "..\\sproutedweb-wp-support"
 		},
 		{
+			"name": "really-simple-ssl",
 			"path": "..\\really-simple-ssl"
+		},
+		{
+			"name": "glorious-services-support",
+			"path": "."
 		}
 	]
 }
