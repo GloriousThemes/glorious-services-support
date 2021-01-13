@@ -15,6 +15,9 @@
 		{
 			"name": "glorious-services-support",
 			"path": "."
+		},
+		{
+			"path": "..\\glorious-services"
 		}
 	]
 }

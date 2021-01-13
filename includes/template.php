@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+require_once( 'services.php');
+?>
 <div class="nav-tab-wrapper">
    <div class="rsssl-logo-container">
       <div id="rsssl-logo"><img width="200" height="" src="<?php echo GLORIOUS_PLUGIN;?>images/glorious-themes-dark.png" alt="glorious-logo"></div>
@@ -82,41 +84,7 @@
                                  <a href="https://really-simple-ssl.com/why-is-my-site-still-not-secure/" target="_blank">Read more</a>
                               </div>
                            </div>
-                           <div class="rsssl-tips-tricks-element">
-                              <div class="rsssl-tips-tricks-content">
-                                 Improve security: Enable HTTP Strict Transport Security (HSTS)				
-                              </div>
-                              <div class="rsssl-tips-tricks-read-more">
-                                 <a href="https://really-simple-ssl.com/hsts-http-strict-transport-security-good/" target="_blank">Read more</a>
-                              </div>
-                           </div>
-                           <div class="rsssl-tips-tricks-element">
-                              <div class="rsssl-tips-tricks-content">
-                                 Improve security: Add security headers				
-                              </div>
-                              <div class="rsssl-tips-tricks-read-more">
-                                 <a href="https://really-simple-ssl.com/everything-you-need-to-know-about-security-headers/" target="_blank">Read more</a>
-                              </div>
-                           </div>
-                           <div class="rsssl-tips-tricks-element">
-                              <div class="rsssl-tips-tricks-content">
-                                 Improve security: Secure cookies                
-                              </div>
-                              <div class="rsssl-tips-tricks-read-more">
-                                 <a href="https://really-simple-ssl.com/secure-cookies-with-httponly-secure-and-use_only_cookies/" target="_blank">Read more</a>
-                              </div>
-                           </div>
-                           <div class="rsssl-tips-tricks-element">
-                              <div class="rsssl-tips-tricks-content">
-                                 Information about landing page redirects                
-                              </div>
-                              <div class="rsssl-tips-tricks-read-more">
-                                 <a href="https://really-simple-ssl.com/knowledge-base/avoid-landing-page-redirects/" target="_blank">Read more</a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tips-tricks-bottom">
-                           Any questions? See the <a href="https://really-simple-ssl.com/knowledge-base/" target="_blank">documentation</a> or the <a href="https://wordpress.org/support/plugin/really-simple-ssl/" target="_blank">WordPress Forum</a>.        
+                           
                         </div>
                      </div>
                   </div>
@@ -126,6 +94,9 @@
                </div>
             </div>
          </div>
+         <?php 
+            glorious_services_view_services();
+         ?>
       </div>
    </div>
 </div>

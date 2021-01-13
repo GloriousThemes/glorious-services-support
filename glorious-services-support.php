@@ -54,6 +54,7 @@ function glorious_services_settings_page() {
 //require_once 'includes/template.php';
 require_once( plugin_dir_path( __FILE__ ) . '/includes/template.php');
 
+
 ?>
 <!-- 
 <div class="wrap">

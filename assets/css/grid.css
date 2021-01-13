@@ -223,7 +223,7 @@
   padding-left: 15px;
 }
 .rsssl-grid .rsssl-item .item-container .rsssl-grid-item-content {
-  height: 360px;
+  height: 250px;
   margin: 10px 25px 10px 25px;
   border-bottom: 1px solid #dedede;
   /*
@@ -521,8 +521,8 @@
 .rsssl-grid .rsssl-item {
   width: calc(100% - 20px);
   padding: 10px;
-  height: 475px;
-  min-height: 500px;
+  height: 375px;
+  min-height: 400px;
   z-index: 1;
 }
 @media only screen and (min-width: 400px) {
