@@ -108,8 +108,8 @@ function glorious_services_view_services() {
                   <div class="rsssl-tips-tricks-element">
                   <img
                     src="<?php echo $key['img']; ?>"
-                    width="300px"
-                    height="150px"
+                    width="100%"
+                    height="170px"
                   />
                   </div>
                   <?php echo $key['desc']; ?>
@@ -118,7 +118,7 @@ function glorious_services_view_services() {
         </div>
       </div>
       <div class="rsssl-grid-item-footer">
-        <a href="<?php echo $key['link']; ?>" target="_blank" class="button button-rsssl-secondary">Buy Now</a>
+        <a href="<?php echo $key['link']; ?>" target="_blank" class="button button-rsssl-secondary" style="float: inherit;width: 93%;text-align: center;">View More Information</a>
       </div>
   </div>
 </div>

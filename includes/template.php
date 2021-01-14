@@ -1,5 +1,6 @@
 <?php 
 require_once( 'services.php');
+require_once( 'recommended-products.php');
 ?>
 <div class="nav-tab-wrapper">
    <div class="rsssl-logo-container">
@@ -39,7 +40,7 @@ require_once( 'services.php');
                            <tbody>
                               <tr>
                                  <th scope="row">
-                                    <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="In most cases you need to leave this enabled, to prevent mixed content issues on your site.">
+                                    <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="Activate the Support Chat to get support directly from our support team.">
                                     <span class="dashicons dashicons-editor-help"></span>
                                     </span>
                                     <div class="rsssl-settings-text">Activate Support via Chat (<?php echo get_option('is_chat_active')==1 ? 'Active' : 'Not Active'; ?>)</div>
@@ -55,7 +56,48 @@ require_once( 'services.php');
                                     
                                  </td>
                               </tr>
+                              <tr>
+                                 <th scope="row">
+                                    <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="Our Recommended Products for every WordPress user.">
+                                    <span class="dashicons dashicons-editor-help"></span>
+                                    </span>
+                                    <div class="rsssl-settings-text">Activate Recommended Products (<?php echo get_option('is_promotion_active')==1 ? 'Active' : 'Not Active'; ?>)</div>
+                                    
+                                 </th>
+                                 <td>
+                                    <label class="rsssl-switch" id="rsssl-maybe-highlight-autoreplace_insecure_links">
 
+                                    <input id="is_promotion_active" name="is_promotion_active" size="40" value="1" type="checkbox" 
+                                        <?php echo get_option('is_promotion_active')==1 ? 'checked="checked"' : ''; ?>>
+                                        <span class="rsssl-slider rsssl-round"></span>
+                                    </label>
+                                    
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">
+                                    <span class="rsssl-tooltip-right tooltip-right" data-rsssl-tooltip="Get WordPress related services from GloriosThemes directly from your dashboard.">
+                                    <span class="dashicons dashicons-editor-help"></span>
+                                    </span>
+                                    <div class="rsssl-settings-text">Activate WP Services (<?php echo get_option('is_services_active')==1 ? 'Active' : 'Not Active'; ?>)</div>
+                                    
+                                 </th>
+                                 <td>
+                                    <label class="rsssl-switch" id="rsssl-maybe-highlight-autoreplace_insecure_links">
+
+                                    <input id="is_services_active" name="is_services_active" size="40" value="1" type="checkbox" 
+                                        <?php echo get_option('is_services_active')==1 ? 'checked="checked"' : ''; ?>
+                                        <?php
+                                          if ( empty(get_option('is_services_active'))){
+                                             echo 'checked="checked"';
+                                          }
+                                        ?>
+                                    >
+                                        <span class="rsssl-slider rsssl-round"></span>
+                                    </label>
+                                    
+                                 </td>
+                              </tr>
                            </tbody>
                         </table>
                      </div>
@@ -70,7 +112,7 @@ require_once( 'services.php');
          <div class="rsssl-item small">
             <div class="item-container">
                <div class="rsssl-grid-item-header">
-                  <h3>Tips &amp; Tricks</h3>
+                  <h3>Information</h3>
                </div>
                <div class="rsssl-grid-item-content">
                   <div class="rsssl-tips-tricks">
@@ -78,10 +120,34 @@ require_once( 'services.php');
                         <div class="tips-tricks-top">
                            <div class="rsssl-tips-tricks-element">
                               <div class="rsssl-tips-tricks-content">
-                                 Is your site still not secure? Do the extensive site scan                
+                                 Every Product You purchase from GloriosThemes comes with 1 year Updates and Support.                
                               </div>
                               <div class="rsssl-tips-tricks-read-more">
-                                 <a href="https://really-simple-ssl.com/why-is-my-site-still-not-secure/" target="_blank">Read more</a>
+                                 <a href="https://gloriousthemes.com/docs/docs/general-information/support/product-updates-support/" target="_blank">Read more</a>
+                              </div>
+                           </div>
+                           <div class="rsssl-tips-tricks-element">
+                              <div class="rsssl-tips-tricks-content">
+                                 How to access your product license.                
+                              </div>
+                              <div class="rsssl-tips-tricks-read-more">
+                                 <a href="https://gloriousthemes.com/docs/docs/general-information/support/how-to-access-your-product-license/" target="_blank">Read more</a>
+                              </div>
+                           </div>
+                           <div class="rsssl-tips-tricks-element">
+                              <div class="rsssl-tips-tricks-content">
+                                 How to make your website look like Demo Site.                
+                              </div>
+                              <div class="rsssl-tips-tricks-read-more">
+                                 <a href="https://gloriousthemes.com/docs/docs/general-information/support/how-to-make-your-website-look-like-demo-site/" target="_blank">Read more</a>
+                              </div>
+                           </div>
+                           <div class="rsssl-tips-tricks-element">
+                              <div class="rsssl-tips-tricks-content">
+                                 How to get help for any technical problems.                
+                              </div>
+                              <div class="rsssl-tips-tricks-read-more">
+                                 <a href="https://gloriousthemes.com/docs/docs/general-information/support/how-to-get-help-for-any-technical-problems/" target="_blank">Read more</a>
                               </div>
                            </div>
                            
@@ -95,7 +161,14 @@ require_once( 'services.php');
             </div>
          </div>
          <?php 
-            glorious_services_view_services();
+            //show recommended products to customer, only if they want it.
+            if ( get_option('is_services_active') == 1  ) {
+               glorious_services_view_services();
+            }
+
+            if ( get_option('is_promotion_active') == 1  ) {
+               glorious_services_view_products();
+            }
          ?>
       </div>
    </div>

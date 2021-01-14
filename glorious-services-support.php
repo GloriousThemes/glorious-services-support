@@ -45,45 +45,13 @@ function glorious_services_create_menu() {
 function register_glorious_services_settings() {
 	//register our settings
 	register_setting( 'glorious-services-settings-group', 'is_chat_active' );
-	//register_setting( 'glorious-services-settings-group', 'some_other_option' );
-	//register_setting( 'glorious-services-settings-group', 'option_etc' );
+	register_setting( 'glorious-services-settings-group', 'is_promotion_active' );
+	register_setting( 'glorious-services-settings-group', 'is_services_active' );
 }
 
 function glorious_services_settings_page() {
-
-//require_once 'includes/template.php';
-require_once( plugin_dir_path( __FILE__ ) . '/includes/template.php');
-
-
-?>
-<!-- 
-<div class="wrap">
-<h1>Glorious Services and Support by GloriousThemes</h1>
-
-<form method="post" action="options.php">
-    <?php // settings_fields( 'glorious-services-settings-group' ); ?>
-    <?php // do_settings_sections( 'glorious-services-settings-group' ); ?>
-    <table class="form-table">
-        <tr valign="top">
-        <th scope="row">Activate Support via Chat</th>
-        <td>
-            <select id="is_chat_active" style="width: 10%;" name="is_chat_active">
-                <option value="1" <?php //echo get_option('is_chat_active')==1 ? 'selected' : ''; ?>>Enable</option>
-                <option value="0" <?php //echo get_option('is_chat_active')==0 ? 'selected' : ''; ?>>Disable</option>
-            </select>
-            <?php // echo esc_attr( get_option('is_chat_active') ); ?>
-            <!-- <input type="text" name="is_chat_active" value="<?php // echo esc_attr( get_option('is_chat_active') ); ?>" /> -->
-            <!--
-        </td>
-        </tr>
-    </table>
-    
-    <?php //submit_button(); ?>
-
-</form>
-</div>
--->
-<?php
+    //require_once 'includes/template.php';
+    require_once( plugin_dir_path( __FILE__ ) . '/includes/template.php');
 } //function ends here
 
 
