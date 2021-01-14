@@ -1,4 +1,5 @@
 <?php
+if (! defined('ABSPATH')) die;
 function glorious_services_view_products() {
 ?>
 <style>

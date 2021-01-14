@@ -13,6 +13,7 @@
 
 // If this file is called directly, abort.
 if (! defined('WPINC')) die;
+if (! defined('ABSPATH')) die;
 
 // Define constant with current version
 if (!defined('GLORIOUS_SERVICE_VERSION'))
@@ -59,7 +60,7 @@ function glorious_services_settings_page() {
  * Register and enqueue a custom stylesheet in the WordPress admin.
  */
 function glorious_services_admin_style() {
-    wp_register_style( 'glorious_grid_admin_css', plugins_url('assets/css/grid.css',__FILE__ ), '1.0.0' );
+    wp_register_style( 'glorious_grid_admin_css', plugins_url('assets/css/grid.min.css',__FILE__ ), '1.0.0' );
     wp_enqueue_style( 'glorious_grid_admin_css' );
 
     wp_register_style( 'glorious_main_admin_css', plugins_url('assets/css/main.css',__FILE__ ), '1.0.0' );

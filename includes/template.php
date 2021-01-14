@@ -1,4 +1,5 @@
 <?php 
+if (! defined('ABSPATH')) die;
 require_once( 'services.php');
 require_once( 'recommended-products.php');
 ?>
@@ -156,7 +157,7 @@ require_once( 'recommended-products.php');
                   </div>
                </div>
                <div class="rsssl-grid-item-footer">
-                  <a href="https://really-simple-ssl.com/knowledge-base-overview/" target="_blank" class="button button-rsssl-secondary">Documentation</a>
+                  <a href="https://gloriousthemes.com/docs/" target="_blank" class="button button-rsssl-secondary">Documentation</a>
                </div>
             </div>
          </div>
