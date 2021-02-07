@@ -1,13 +1,12 @@
 === Glorious Services & Support ===
 Contributors: gloriousthemes, nirajkashyap
-Tags: services,support,gloriousthemes,
+Tags: services,support,gloriousthemes,wordpress help,wordpress support
 Requires at least: 4.6
 License: GPL2
 Tested up to: 5.6
 Requires PHP: 5.4
 Stable tag: 1.0.0
 
-No setup required! Install the plugin, and this plugin will do the rest. 
 
 == Description ==
 Glorious Services & Support by GloriousThemes helps customers and users who are using GloriouThemes themes and Plugins to directly contact the Support Team to get support for the plugin/theme and fix issues quickly. It also helps you upgrade your theme/plugins and services from the WordPress Dashboard itself.
@@ -20,6 +19,7 @@ Crisp chat feature is TURNED OFF by Default.
 * Once you activate this plugin, you’ll be able to instantly connect with one of our Support via our 24×7 Chat Support.
 * Get access to our Knowledgebase, Tools, Resources and Customer area directly, without the hassle of finding the links.
 * The Plugin allows our Customer to have a quick access to any of our services right from their dashboard.
+* The plugin is designed to help GloriousThemes customers get quick support and a 24x7 chat support.
 
 
 

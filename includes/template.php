@@ -88,11 +88,7 @@ require_once( 'recommended-products.php');
 
                                     <input id="is_services_active" name="is_services_active" size="40" value="1" type="checkbox" 
                                         <?php echo get_option('is_services_active')==1 ? 'checked="checked"' : ''; ?>
-                                        <?php
-                                          if ( empty(get_option('is_services_active'))){
-                                             echo 'checked="checked"';
-                                          }
-                                        ?>
+                                        
                                     >
                                         <span class="rsssl-slider rsssl-round"></span>
                                     </label>
