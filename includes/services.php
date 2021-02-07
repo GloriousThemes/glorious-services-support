@@ -26,67 +26,67 @@ function glorious_services_view_services() {
   /* Using array and Foreach */
   $serviceArray = array(
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/wordpress-install.png',
+      'img'  => 'wordpress-install.png',
       'name' => 'Complete WordPress Installation',
       'desc' => 'Install WordPress + SEO + Security + Plugins + Themes + Backups',
       'link' => 'https://gloriousthemes.com/services/wordpress-theme-setup/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/hacked.png',
+      'img'  => 'hacked.png',
       'name' => 'Protect WordPress from Hacking',
       'desc' => 'Tightens your WordPress Security and Protects it from Spam and hacking',
       'link' => 'https://gloriousthemes.com/services/wordpress-hacking/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/speed.png',
+      'img'  => 'speed.png',
       'name' => 'WordPress Speed Optimization',
       'desc' => 'SEO optimize your wordpress website by installing SEO plugin, optimizing it, Creating XML sitemap and submitting it to Google Search Console',
       'link' => 'https://gloriousthemes.com/services/speed/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/ssl.png',
+      'img'  => 'ssl.png',
       'name' => 'WordPress SSL Setup – Complete https',
       'desc' => 'Make your WordPress site SSL ready and fix all the mix-content',
       'link' => 'https://gloriousthemes.com/services/wordpress-ssl-setup/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/multisite.png',
+      'img'  => 'multisite.png',
       'name' => 'WordPress Multisite Installation',
       'desc' => 'Make your Normal WordPress into a MultiSite WordPress. Either use Sub-Domains or Sub-Directory for your WordPress MultiSite.',
       'link' => 'https://gloriousthemes.com/services/wordpress-multisite-installation/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/malware.png',
+      'img'  => 'malware.png',
       'name' => 'WordPress Malware Removal',
       'desc' => 'If your WordPress Site is suffering from Malware or has been attacked by malware. Then this service will help you get rid from Malware from your site',
       'link' => 'https://gloriousthemes.com/services/wordpress-malware-removal/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/care.png',
+      'img'  => 'care.png',
       'name' => 'WordPress Care Plan',
       'desc' => 'You focus on your Work/Business and We handle your WordPress. Literally everything for WordPress.',
       'link' => 'https://gloriousthemes.com/services/wordpress-care-plan',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/backup.png',
+      'img'  => 'backup.png',
       'name' => 'WordPress Backup Service',
       'desc' => 'Get your WordPress Site, Database and all your important works backedup everynight on remote servers like Google Drive, Dropbox or Amazon S3 & Restore with 1-Click Button.',
       'link' => 'https://gloriousthemes.com/services/wordpress-backup-service/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/hacked-protect.png',
+      'img'  => 'hacked-protect.png',
       'name' => 'Recover Hacked WordPress Website',
       'desc' => 'Our Experts helps your get back your site and fix the loophole from where the hacker has gained access.',
       'link' => 'https://gloriousthemes.com/services/recover-hacked-wordpress-website/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/onpageseo.png',
+      'img'  => 'onpageseo.png',
       'name' => 'WordPress OnPage SEO',
       'desc' => 'Complete Optimization of WordPress OnPage SEO. Now Take your game to the next level.',
       'link' => 'https://gloriousthemes.com/services/wordpress-onpage-seo/',
     ),
     array(
-      'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/glorious-services.png',
+      'img'  => 'glorious-services.png',
       'name' => 'Other WordPress Services',
       'desc' => 'A community of WordPress enthusiasts with expert plugin developers, theme developers, hosting providers etc.',
       'link' => 'https://gloriousthemes.com/',
@@ -108,7 +108,7 @@ function glorious_services_view_services() {
               <div class="tips-tricks-top">
                   <div class="rsssl-tips-tricks-element">
                   <img
-                    src="<?php echo $key['img']; ?>"
+                    src="<?php echo GLORIOUS_PLUGIN.'assets/img/'.$key['img']; ?>"
                     width="100%"
                     height="170px"
                   />

@@ -2,7 +2,7 @@
 /**
  * The main file of the Glorious Services & Support
  *
- * Plugin Name: Glorious Services & Support by GloriousThemes
+ * Plugin Name: Glorious Services & Support
  * Plugin URI: https://wordpress.org/plugins/glorious-services-support/
  * Description: WordPress Services for GloriousThemes customers that enables the customer to get services like installing the themes or plugins of GloriousThemes. It also allows customer to get support directly from GloriousThemes Support team for all gloriousthemes products!
  * Author: GloriousThemes
@@ -106,12 +106,15 @@ if ( ! function_exists( 'gss_fs' ) ) {
 
 
 
-/* Describe what the code snippet does so you can remember later on */
+/* allows customers and users to contact Glorious Support team
+* 24x7 via Chat Support, but the user needs to activate the service
+* via the settings api
+*/
 add_action('admin_head', 'glorious_chat_code');
 function glorious_chat_code(){
     if(get_option('is_chat_active') == 1 ){
     ?>
-    <script src="//code.tidio.co/vaty8wxfehnkr4iofaae5znr0rmbjwtq.js" async></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="2ba7322a-3946-4920-af5d-eff26031f254";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <?php
     }
 }

@@ -26,27 +26,21 @@ function glorious_services_view_products() {
   /* Using array and Foreach */
   $serviceArray = array(
      array(
-          'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/siteground-review.jpg',
+          'img'  => 'siteground-review.jpg',
           'name' => 'SiteGround',
           'desc' => 'Managed high-performance cloud hosting platform. 5 popular cloud providers with unlimited sites.',
           'link' => 'https://gloriousthemes.com/siteground',
         ),
         array(
-          'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/elementor.png',
-          'name' => 'Elementor Pro',
-          'desc' => 'Elementor Pro allows you to create a Complete WordPress Theme without writing a piece of code. Using its Drag and Drop Builder.',
-          'link' => 'https://gloriousthemes.com/elementor',
-        ),
-        array(
-          'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/wp-rocket.png',
+          'img'  => 'wp-rocket.png',
           'name' => 'WP Rocket',
           'desc' => '#1 cache plugin to speed WordPress. Get a faster website in a few clicks.',
           'link' => 'https://gloriousthemes.com/wp-rocket',
         ),
         array(
-          'img'  => 'https://gloriousthemes.com/wp-content/uploads/2020/08/bunnycdn.png',
+          'img'  => 'bunnycdn.png',
           'name' => 'BunnyCDN',
-          'desc' => '37+ pops which provide <30ms latency worldwide. Cheap as ~$1/month. Use coupon code \'WPSPEEDMATTERS\' to get $5 OFF.',
+          'desc' => '37+ pops which provide <30ms latency worldwide. Cheap as ~$1/month.',
           'link' => 'https://gloriousthemes.com/bunnycdn',
         )
   );
@@ -66,7 +60,7 @@ function glorious_services_view_products() {
               <div class="tips-tricks-top">
                   <div class="rsssl-tips-tricks-element">
                   <img
-                    src="<?php echo $key['img']; ?>"
+                    src="<?php echo  GLORIOUS_PLUGIN.'assets/img/'.$key['img']; ?>"
                     width="100%"
                     height="170px"
                   />
